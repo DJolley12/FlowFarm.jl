@@ -1,5 +1,5 @@
-include("turbines.jl")
-include("wake_models.jl")
+include("d:\\source\\WindFarmCode\\Julia\\FlowFarm.jl\\src\\turbines.jl")
+include("d:\\source\\WindFarmCode\\Julia\\FlowFarm.jl\\src\\wake_models.jl")
 using Plots
 
 model = Jensen(0.1)
@@ -15,7 +15,7 @@ ct = 0.7 #TODO handle ct and axial induction appropriately
 turbine = Turbine(coord, rotor_diameter, hub_height, aI, gamma, yaw, ct)
 println(turbine)
 
-num = 1000
+num = 10
 xlocs = ones(num).*900.0
 ylocs = range(-300,stop=300,length=num)
 zlocs = ones(num).*turbine.hub_height
